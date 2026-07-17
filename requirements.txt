@@ -1,0 +1,15 @@
+# protobuf must stay below 5.0 -- mediapipe wheels 0.10.30+ combined with
+# protobuf>=5 break mp.solutions (AttributeError: no attribute 'solutions')
+protobuf==4.25.3
+mediapipe==0.10.35
+
+# opencv-python-headless (not opencv-python) avoids GUI/libGL dependencies
+# that break on Streamlit Cloud / Hugging Face Spaces
+opencv-python-headless>=4.8.0
+
+numpy>=1.24.0
+scikit-learn>=1.3.0
+joblib>=1.3.0
+pandas>=1.5.0
+streamlit>=1.30.0
+Pillow>=10.0.0
